@@ -116,7 +116,7 @@ describe './lib/tic_tac_toe.rb' do
 
   describe '#turn_count' do
     it 'counts occupied positions' do
-      board = ['O', ' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X']
+      board = [' ', ' ', ' ', ' ', 'X', ' ', ' ', ' ', ' ']
 
       expect(turn_count(board)).to eq(3)
     end
