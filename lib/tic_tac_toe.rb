@@ -58,7 +58,6 @@ end
 
 def won?(board)
   WIN_COMBINATIONS.detect do |win_combo|
-    expect(won?(board)).to be_falsey
     position_1 = board[win_combo[0]]
     position_2 = board[win_combo[1]]
     position_3 = board[win_combo[2]]
