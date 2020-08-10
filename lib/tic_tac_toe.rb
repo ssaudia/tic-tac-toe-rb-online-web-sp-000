@@ -91,7 +91,7 @@ def play(board)
   end
 
   if won?(board)
-    puts ("Congratulations X!") ||
+    puts ("Congratulations X!")
     puts ("Congratulations O!")
   else
     puts "Cat's Game!"
