@@ -40,7 +40,7 @@ def turn(board)
   index = input_to_index(input)
 
   if valid_move?(board, index)
-    move(baord, index, current_player(board))
+    move(board, index, current_player(board))
     display_board(board)
   else
     puts "Whoops! That's not a valid move"
@@ -62,14 +62,14 @@ def won?(board)
     position_2 = board[win_combo[1]]
     position_3 = board[win_combo[2]]
 
-    position_1 == "X" && postion_2 == "X" && postion_3 ||
-    position_1 == "O" && postion_2 == "O" && postion_O
+    position_1 == "X" && position_2 == "X" && position_3 ||
+    position_1 == "O" && position_2 == "O" && position_O
   end
 end
 
 def full?(board)
   board.all? do |position|
-    postion == "X" || postion == "O"
+    position == "X" || position == "O"
   end
 end
 
@@ -82,7 +82,7 @@ def over?(board)
 end
 
 def winner(board)
-  won?(board) && board[won?(board)[X]]
+  won?(board) && board[won?(board)[O]]
 end
 
 def play(board)
@@ -91,7 +91,7 @@ def play(board)
   end
 
   if won?(board)
-    puts "Congrationations #{winner(board)}"
+    puts "Congratulations #{winner(board)}!"
   else
     puts "Cat's Game!"
   end
